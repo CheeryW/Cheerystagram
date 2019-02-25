@@ -1,5 +1,6 @@
 package com.example.cheerystagram;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
     private static final String LOGIN_ERR_MSG = "Issue with login";
+    private static final String TO_MAIN_ACTIVITY = "Navigating to Main Activity";
 
     private EditText etUsername;
     private EditText etPassword;
@@ -23,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
@@ -53,6 +55,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void goMainActivity() {}
+    private void goMainActivity() {
+        Log.d(TAG, TO_MAIN_ACTIVITY);
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
 
 }

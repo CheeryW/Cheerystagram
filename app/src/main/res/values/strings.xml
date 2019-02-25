@@ -5,4 +5,8 @@
     <string name="password_hint">Password</string>
     <string name="username_hint">Username</string>
     <string name="server_url">https://cheery-instagram.herokuapp.com/parse</string>
+    <string name="post_description">Post your life to Cheerystagram!</string>
+    <string name="take_picture">Take picture</string>
+    <string name="post_image_description">Image posted by user</string>
+    <string name="submit_hint">Post your story!</string>
 </resources>
